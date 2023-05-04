@@ -21,7 +21,7 @@ function convert() {
       loading.value = false
     })
     .catch((error) => {
-      console.log(console.error());
+      console.log(error);
       loading.value = false
     });
 }

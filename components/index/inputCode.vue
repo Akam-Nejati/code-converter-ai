@@ -30,13 +30,16 @@ function convert() {
         <div class="flex justify-between items-center mb-4">
             <select @change="changeLang" v-model="inputLang" class="select select-bordered w-2/4 max-w-xs shadow-2xl">
                 <option selected>javascript</option>
+                <option>ts</option>
                 <option>python</option>
                 <option>php</option>
                 <option>c</option>
                 <option>c++</option>
                 <option>ruby</option>
                 <option>rust</option>
-                <option>go</option>
+                <option>golang</option>
+                <option>java</option>
+                <option>kotlin</option>
             </select>
             <button @click="convert" class="btn" :class="{'btn-disabled': inputLang === outputLang || !inputCode}">convert</button>
         </div>

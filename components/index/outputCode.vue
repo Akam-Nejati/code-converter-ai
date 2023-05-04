@@ -20,19 +20,23 @@ function changeLang() {
 
 <template>
     <div class="lg:w-1/2 w-full  m-4">
-        <select @change="changeLang" v-model="outputLang" class="select select-bordered w-full md:w-2/4 md:max-w-xs shadow-2xl mb-4">
+        <select @change="changeLang" v-model="outputLang"
+            class="select select-bordered w-full md:w-2/4 md:max-w-xs shadow-2xl mb-4">
             <option>javascript</option>
+            <option>ts</option>
             <option selected>python</option>
             <option>php</option>
             <option>c</option>
             <option>c++</option>
             <option>ruby</option>
             <option>rust</option>
-            <option>go</option>
+            <option>golang</option>
+            <option>java</option>
+            <option>kotlin</option>
         </select>
         <div class="relative">
             <div v-if="!outputCode" class="absolute top-0 left-0 w-full h-full bg-[#00000052] z-20">
-                <Loading v-if="loading"/>
+                <Loading v-if="loading" />
             </div>
             <codemirror class="shadow-xl" v-model="outputCode" placeholder="Output Code ..." :style="{ height: '400px' }"
                 :autofocus="true" :indent-with-tab="true" :tab-size="2" :extensions="extensions" @ready="handleReady" />
