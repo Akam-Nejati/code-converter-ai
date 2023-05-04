@@ -1,0 +1,5 @@
+export const useInputCode = () => useState<string>('inputCode', () => '')
+export const useOutPutCode = () => useState<string>('outPutCode', () => '')
+export const useInputLang = () => useState<string>('inputLang', () => 'javascript')
+export const useOutPutLang = () => useState<string>('OutPutLang', () => 'python')
+export const useLoading = () => useState<boolean>('loading', () => false)
