@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  daisyui: {
+    themes: ["dark"],
+  },
   content: [
     "./components/**/*.{js,vue,ts}",
     "./layouts/**/*.vue",
